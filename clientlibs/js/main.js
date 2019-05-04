@@ -28,5 +28,16 @@ $(function() {
             scrollTop: $("#section-5").offset().top}, 'slow');
     });
     
+    //Add event listeners for project hidden content expansion
+    
+//    $("#pathfound").click(function() {
+//        if ($('#pathfound-additional').hasClass('expanded')) {
+//            console.info('class found');
+//        }
+//        else {
+//            console.info('class not found');
+//        }
+//    });
+    
 });
 

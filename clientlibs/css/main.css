@@ -105,6 +105,26 @@ a {
     padding-right: 0;
 }
 
+.inner .skill-row {
+    text-align: center;
+}
+
+.inner .skill-row ul {
+    list-style: none;
+}
+
+.inner .skill-row ul li {
+    color: #fff;
+}
+
+.inner .experience-row ul li {
+    color: #fff;
+}
+
+.inner .skill-row .skill-col {
+    border-right: solid 2px rgba(255, 255, 255, 0.125);
+}
+
 .inner .image-col {
     padding-left: 0;
     padding-right: 0;
@@ -122,7 +142,7 @@ h1 {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h4, h5, h6 {
     color: #ffffff;
     font-weight: 600;
     line-height: 1.5;
@@ -130,6 +150,27 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
+
+h2 {
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+}
+
 
 p {
     margin: 0 0 2rem 0;
@@ -169,7 +210,7 @@ ul {
 .content .navigation ul li {
     padding-left: 0;
     border-left: solid 1px #ffffff;
-    width: 24.90%;
+    width: 100%;
     text-align: center;
 }
 
@@ -211,6 +252,78 @@ ul {
 
 a:not([href]):not([tabindex]):hover {
     color: #fff;
+}
+
+a.special:not(.button) {
+    text-decoration: none;
+    border-bottom: 0;
+    display: block;
+    font-family: Raleway, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+a.special:not(.button):hover:before {
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+a.special:not(.button):before {
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100%;
+    border: solid 2px rgba(255, 255, 255, 0.125);
+    content: '\f105';
+    display: inline-block;
+    font-size: 1.25em;
+    height: 2em;
+    line-height: 1.65em;
+    margin-right: 0.85em;
+    text-align: center;
+    text-indent: 0.15em;
+    vertical-align: middle;
+    width: 2em;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+    
+}
+
+article {
+    padding: 1.75em 1.75em 0.1em 1.75em;
+    background-color: #353849;
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+}
+
+article .image {
+    border-radius: 5px 5px 0 0;
+    display: block;
+    margin-bottom: 1.75em;
+    margin-left: -1.75em;
+    margin-top: -1.75em;
+    position: relative;
+    width: calc(100% + 3.5em);
+}
+
+article .image img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    display: block;
+}
+
+h3.project-title {
+    padding-bottom: 1em;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+    font-size: 1.5em;
 }
 
 /*Sections------------------------------------------------------------------------------------*/
@@ -447,6 +560,36 @@ ul.contact li:before {
     margin-top: 4rem;
 }
 
+.modal-content {
+    color: rgb(220,220,220);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px 20px 5px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-shadow: 5px 8px 10px #000000;
+    padding: 20px;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+}
+
+.modal-content button {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+
+.modal-content button:hover {
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+#pathfound-active-video video {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#pathfound-additional-info {
+    overflow-y: scroll;
+}
+
 /*Utility-------------------------------------------------------------------------------------*/
 
 .align-right {
@@ -478,9 +621,18 @@ ul.contact li:before {
     opacity: 1;
 }
 
+#pathfound-additional {
+    transition: all 0.35s ease-in;
+    max-height: 0;
+}
+
+#pathfound-additional.expanded { 
+    max-height: 100%;
+}
+
 
 /*Breakpoints----------------------------------------------------------------------------------*/
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
     
     .wrapper {
         height: 100%;
@@ -507,7 +659,17 @@ ul.contact li:before {
     }
     
     #section-2 .inner p, #section-3 .inner p,  #section-4 .inner p {
-    text-align: center;
-    text-transform: none;
+        text-align: center;
+        text-transform: none;
+    }
+    
+    .inner .skill-row .skill-col {
+    border: none;
+    }
 }
+
+@media only screen and (max-width: 991px) {
+    .inner .skill-row .skill-col {
+        border: none;
+    }
 }
