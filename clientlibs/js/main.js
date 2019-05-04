@@ -72,8 +72,9 @@ $("#contact-submit").click(function() {
     var name = $('#contact #name').val();
     var email = $('#contact #email').val();
     var message = $('#contact textarea').val();
-    console.info('mailto:cmartyniuk1@gmail.com?subject=The subject - ' + name + ' (' + email + ')' + '&body=' + message);
-    window.open('mailto:cmartyniuk1@gmail.com?subject=The subject - ' + name + ' (' + email + ')' + '&body=' + message + '_self');
+    var emailRef = 'mailto:cmartyniuk1@gmail.com?subject=' + name + ' (' + email + ')' + '&body=' + message;
+    console.info(emailRef);
+    window.open(emailRef);
 
 });
 
