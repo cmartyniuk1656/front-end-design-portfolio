@@ -39,7 +39,7 @@ $(function() {
     
     $("#pf-create-account").click(function() {
         pfExpandContent();
-        setVideoSrc('assets/videos/interacting-with-gameroom.mp4');
+        setVideoSrc('assets/videos/create-an-account.mp4');
     });
     
     $("#pf-create-join").click(function() {
