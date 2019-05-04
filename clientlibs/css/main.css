@@ -320,6 +320,10 @@ article .image img {
     display: block;
 }
 
+article a {
+    border-bottom: none;
+}
+
 h3.project-title {
     padding-bottom: 1em;
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
@@ -588,6 +592,10 @@ ul.contact li:before {
 
 #pathfound-additional-info {
     overflow-y: auto;
+}
+
+#submit-link {
+    border-bottom: none;
 }
 
 /*Utility-------------------------------------------------------------------------------------*/
